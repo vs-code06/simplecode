@@ -1,0 +1,209 @@
+/* Global Styles */
+body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; color: #333; line-height: 1.6; }
+
+/* Navigation */
+nav {
+    background-color: #333;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul { display: flex; justify-content: center; list-style: none; margin: 0; }
+nav ul li { margin: 0 15px; }
+nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover { color: #3498db; }
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeUp 1.5s ease-out forwards 0.3s;
+}
+
+.cta-btn {
+    background-color: #fff;
+    color: #3498db;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 0;
+    animation: fadeUp 1.5s ease-out forwards 0.6s;
+}
+
+.cta-btn:hover { background-color: #2980b9; color: white; }
+
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+/* Section Styles */
+section { padding: 50px 20px; text-align: center; }
+section h2 { font-size: 2rem; margin-bottom: 30px; }
+
+/* Skills Section */
+.skills { background-color: #ecf0f1; }
+.skills-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.skill { width: 200px; margin-bottom: 20px; }
+.skill h3 { font-size: 1.2rem; margin-bottom: 10px; }
+
+.progress-bar {
+    height: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.html { width: 90%; background-color: #e74c3c; }
+.css { width: 80%; background-color: #2ecc71; }
+.python { width: 85%; background-color: #3498db; }
+.mysql { width: 75%; background-color: #f39c12; }
+
+/* Projects Section */
+.projects { padding: 50px 20px; background-color: #fff; }
+.projects-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+
+.project {
+    width: 250px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project:hover { transform: translateY(-10px); }
+.project a {
+    color: #3498db;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project:hover a { color: #2980b9; }
+
+/* Contact Section */
+.contact {
+    background-color: #ecf0f1;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 3px solid #3498db;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover { background-color: #2980b9; transform: scale(1.05); }
+.submit-btn:active { transform: scale(1); }
+
+/* Experience Section */
+.experience { background-color: #f9f9f9; }
+.experience-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3 { font-size: 1.5rem; margin-bottom: 10px; }
+
+.experience-item ul { list-style: none; padding-left: 0; }
+
+.experience-item ul li {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.experience-item ul li::before {
+    content: "• ";
+    color: #007bff;
+}
+
+/* Skill Description */
+.skill-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+    line-height: 1.5;
+    max-width: 80%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.skill-description strong { font-weight: bold; }
+.skill-description em { color: #007bff; font-style: italic; }
